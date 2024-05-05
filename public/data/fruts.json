@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Apple", "calorie": 2400, "vitamine": ["B2"] },
+  { "id": 2, "name": "Banana", "calorie": 3000, "vitamine": ["D", "A"] },
+  { "id": 3, "name": "Strawbery", "calorie": 1500, "vitamine": ["C"] },
+  { "id": 4, "name": "Peaneple", "calorie": 800, "vitamine": ["A"] },
+  { "id": 5, "name": "Coconut", "calorie": 1000, "vitamine": ["A"] }
+]

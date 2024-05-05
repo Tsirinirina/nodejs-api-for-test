@@ -1,0 +1,18 @@
+{
+  "name": "dataset-api-local",
+  "version": "1.0.0",
+  "description": "API pour test",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Bust",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.2.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
