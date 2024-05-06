@@ -1,4 +1,4 @@
-const users = require("../public/data/users.json");
+const users = require("../public/data/MOCK_DATA.json");
 
 exports.getAllUser = (req, res) => {
   console.log(`${req.method} : requêtes vers user${req.url}`);
@@ -17,10 +17,23 @@ exports.getPaginatedUser = (req, res) => {
 
   const searchResults = users.filter((user) => {
     const idSearch = user.id.toString() === search;
-    const nameSearch = user.name.toString() === search;
-    const ageSearch = user.age.toString() === search;
+    const firstnameSearch = user.firstname.toString() === search;
+    const lastnameSearch = user.lastname.toString() === search;
+    const emailSearch = user.email.toString() === search;
     const genderSearch = user.gender.toString() === search;
-    return idSearch || nameSearch || ageSearch || genderSearch;
+    const phoneSearch = user.phone.toString() === search;
+    const birthDateSearch = user.birthDate.toString() === search;
+    const birthPlaceSearch = user.birthPlace.toString() === search;
+    return (
+      idSearch ||
+      firstnameSearch ||
+      lastnameSearch ||
+      genderSearch ||
+      emailSearch ||
+      phoneSearch ||
+      birthDateSearch ||
+      birthPlaceSearch
+    );
   });
 
   const startIndex = (page - 1) * pageSize;
