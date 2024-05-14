@@ -1,4 +1,4 @@
-const users = require("../public/data/MOCK_DATA.json");
+const users = require("../public/data/users.json");
 
 exports.getAllUser = (req, res) => {
   console.log(`${req.method} : requêtes vers user${req.url}`);
@@ -49,5 +49,6 @@ exports.getPaginatedUser = (req, res) => {
     currentPage: page,
     pageSize: pageSize,
     totalPages: Math.ceil(users.length / pageSize),
+    totalRows: users.length,
   });
 };
